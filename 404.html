@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Alert</title>
+<base href="https://uttam-bhagat.github.io/AlertModule1/.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">-->
+  <!--<link rel="icon" href="./images/favicon.ico" type="image/x-icon">-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+<script>
+  var splitQueryParam = (window.location.search).split("?")[1];
+  if(splitQueryParam != undefined)
+  {
+    var queryParam = splitQueryParam.split("&");
+    sessionStorage.setItem("alertTestRun",queryParam[0].split("=")[1]);
+    sessionStorage.setItem("alertUserName",queryParam[1].split("=")[1]);
+    sessionStorage.setItem("alert_client_connection_key",queryParam[2].split("=")[1]);
+    sessionStorage.setItem("alertProdyctType",queryParam[3].split("=")[1]);
+    sessionStorage.setItem("alertType",queryParam[4].split("=")[1]);
+    sessionStorage.setItem("alertSeverity",queryParam[5].split("=")[1]);
+    sessionStorage.setItem("userTheme",queryParam[6].split("=")[1]);
+  }
+  console.log("userTheme = " +  sessionStorage.getItem("userTheme") + "UserTheme=" + localStorage.getItem("UserTheme"));
+</script>
+<link href="styles.b4d590dd20c0c17bd2a6.bundle.css" rel="stylesheet"/></head>
+<body>
+<app-alert>
+ <div class="loading">
+  <div class="loadingBox">
+   <div class="alert-module-name">Alerts</div>
+    <div class="loadingSpin">
+     <div align="center" class="fond">
+      <div class="contener_general">
+       <div class="contener_mixte"><div class="ballcolor ball_1">&nbsp;</div></div>
+       <div class="contener_mixte"><div class="ballcolor ball_2">&nbsp;</div></div>
+       <div class="contener_mixte"><div class="ballcolor ball_3">&nbsp;</div></div>
+       <div class="contener_mixte"><div class="ballcolor ball_4">&nbsp;</div></div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</app-alert>
+<script type="text/javascript" src="inline.5225628431e1b4378e74.bundle.js"></script><script type="text/javascript" src="vendor.995a7b9ffdcd51472532.bundle.js"></script><script type="text/javascript" src="main.309cc116c4e2ee0052c5.bundle.js"></script></body>
+</html>
